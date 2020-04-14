@@ -24,7 +24,7 @@ const std::string find_container_id(std::string pid) {
 
         const std::string s{str_stream.str()};
         std::smatch m;
-        std::regex e("(.*)( /docker/)([^ ]*)( /sys/fs/cgroup/memory)");
+        std::regex e("(.*)(/)([^ ]*)( /sys/fs/cgroup/memory)");
 
         std::regex_search(s, m, e);
         return m[3];
